@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">36 Days Around Nigeria</string>
+    <string name="do_you_know">Do You Know?</string>
+
+    <string name="abia_state">Abia</string>
+    <string name="abia_state_capital">Umuahia</string>
+    <string name="abia_state_slogan">"God's Own State"</string>
+
+    <string name="adamawa_state">Adamawa</string>
+    <string name="adamawa_state_capital">Yola</string>
+    <string name="adamawa_state_slogan">Highest peak of the nation</string>
+
+    <string name="akwa_ibom_state">Akwa Ibom</string>
+    <string name="akwa_ibom_state_capital">Uyo</string>
+    <string name="akwa_ibom_state_slogan">Land of promise</string>
+
+    <string name="anambra_state">Anambra</string>
+    <string name="anambra_state_capital">Awka</string>
+    <string name="anambra_state_slogan">Light of the nation</string>
+
+    <string name="bauchi_state">"Bauchi"</string>
+    <string name="bauchi_state_capital">Bauchi</string>
+    <string name="bauchi_state_slogan">"Pearl of Tourism"</string>
+
+    <string name="bayelsa_state">Bayelsa</string>
+    <string name="bayelsa_state_capital">Yenagoa</string>
+    <string name="bayelsa_state_slogan">The Glory of All Lands</string>
+
+    <string name="benue_state">Benue</string>
+    <string name="benue_state_capital">Makurdi</string>
+    <string name="benue_state_slogan">Food basket of the Nation</string>
+
+    <string name="borno_state">Borno</string>
+    <string name="borno_state_capital">Maiduguri</string>
+    <string name="borno_state_slogan">Home of peace</string>
+
+    <string name="cross_river_state">Cross River</string>
+    <string name="cross_river_state_capital">Calabar</string>
+    <string name="cross_river_state_slogan">The people’s paradise</string>
+
+    <string name="delta_state">Delta</string>
+    <string name="delta_state_capital">Asaba</string>
+    <string name="delta_state_slogan">The Finger of God</string>
+
+    <string name="ebonyi_state">Ebonyi</string>
+    <string name="ebonyi_state_capital">Abakaliki</string>
+    <string name="ebonyi_state_slogan">The salt of the Nation</string>
+
+    <string name="edo_state">Edo</string>
+    <string name="edo_state_capital">Benin City</string>
+    <string name="edo_state_slogan">The Heart Beat of the Nation</string>
+
+    <string name="ekiti_state">Ekiti</string>
+    <string name="ekiti_state_capital">Ado – Ekiti</string>
+    <string name="ekiti_state_slogan">Land of honour and integrity</string>
+
+    <string name="enugu_state">Enugu</string>
+    <string name="enugu_state_capital">Enugu</string>
+    <string name="enugu_state_slogan">Coal City State</string>
+
+    <string name="gombe_state">"Gombe"</string>
+    <string name="gombe_state_capital">Gombe</string>
+    <string name="gombe_state_slogan">"Jewel in the Savannah"</string>
+
+    <string name="imo_state">"Imo"</string>
+    <string name="imo_state_capital">Imo</string>
+    <string name="imo_state_slogan">"Eastern heartland"</string>
+
+
+</resources>
