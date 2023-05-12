@@ -11,4 +11,5 @@ data class State(
     @StringRes val slogan: Int,
     @DrawableRes val imageRes: Int,
     @StringRes val doYouKnowRes : Int,
-    @StringRes val descriptionRes: Int)
+)
+//    @StringRes val descriptionRes: Int
