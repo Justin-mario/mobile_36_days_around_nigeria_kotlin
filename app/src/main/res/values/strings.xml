@@ -2,6 +2,11 @@
     <string name="app_name">36 Days Around Nigeria</string>
     <string name="do_you_know">Do You Know?</string>
 
+    <string name="day">Day:</string>
+    <string name="state">State:</string>
+    <string name="capital">Capital:</string>
+    <string name="slogan">Slogan:</string>
+
     <string name="abia_state">Abia</string>
     <string name="abia_state_capital">Umuahia</string>
     <string name="abia_state_slogan">"God's Own State"</string>
