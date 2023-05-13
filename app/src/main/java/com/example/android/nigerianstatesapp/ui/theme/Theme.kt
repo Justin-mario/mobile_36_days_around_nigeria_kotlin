@@ -2,6 +2,7 @@ package com.example.android.nigerianstatesapp.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Typography
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
@@ -85,6 +86,7 @@ fun NigerianStatesAppTheme(
 
   MaterialTheme(
     colorScheme = colors,
-    content = content
+    content = content,
+      typography = Typography
   )
 }
