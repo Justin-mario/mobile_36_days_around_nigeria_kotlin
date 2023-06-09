@@ -64,20 +64,21 @@ fun StateInformation(state: State, modifier: Modifier = Modifier) {
        elevation = CardDefaults.cardElevation(8.dp)
        ) {
        Column(
+           modifier = Modifier.padding(8.dp),
            verticalArrangement = Arrangement.Center,
            horizontalAlignment = Alignment.Start ) {
 //           Text(text = stringResource(id = state.day))
            Row() {
-               Text(text = stringResource(id = R.string.state))
+               Text(text = stringResource(id = R.string.state), modifier = Modifier.padding(end = 8.dp))
                Text(text = stringResource(id = state.stateRes))
            }
            Row() {
-               Text(text = stringResource(id = R.string.capital))
+               Text(text = stringResource(id = R.string.capital), modifier = Modifier.padding(end = 8.dp))
                Text(text = stringResource(id = state.capitalRes))
            }
 
            Row() {
-               Text(text = stringResource(id = R.string.slogan))
+               Text(text = stringResource(id = R.string.slogan), modifier = Modifier.padding(end = 8.dp))
                Text(text = stringResource(id = state.slogan))
            }
 
@@ -89,7 +90,8 @@ fun StateInformation(state: State, modifier: Modifier = Modifier) {
            modifier = Modifier
                .fillMaxSize()
                .padding(8.dp),
-           contentScale = ContentScale.Crop)
+           contentScale = ContentScale.Crop,
+           )
        }
 
    }
