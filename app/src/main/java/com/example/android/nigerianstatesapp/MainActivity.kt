@@ -68,9 +68,16 @@ fun StateInformation(state: State, modifier: Modifier = Modifier) {
            verticalArrangement = Arrangement.Center,
            horizontalAlignment = Alignment.Start ) {
 //           Text(text = stringResource(id = state.day))
+           Row {
+               Text(text = stringResource(id = R.string.number))
+
+           }
            Row() {
-               Text(text = stringResource(id = R.string.state), modifier = Modifier.padding(end = 8.dp))
-               Text(text = stringResource(id = state.stateRes))
+               Text(text = stringResource(id = R.string.state),
+                   style = MaterialTheme.typography.displayLarge,
+                   modifier = Modifier.padding(end = 8.dp))
+               Text(text = stringResource(id = state.stateRes),
+                   style = MaterialTheme.typography.displayLarge,)
            }
            Row() {
                Text(text = stringResource(id = R.string.capital), modifier = Modifier.padding(end = 8.dp))
