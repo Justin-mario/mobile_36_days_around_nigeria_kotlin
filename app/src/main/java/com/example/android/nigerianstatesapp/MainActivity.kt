@@ -1,5 +1,6 @@
 package com.example.android.nigerianstatesapp
 
+import android.graphics.fonts.FontStyle
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -54,14 +55,17 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NigerianStatesAppBar(modifier: Modifier = Modifier){
+
     CenterAlignedTopAppBar(title = {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Image(modifier = Modifier
-                .size(56.dp)
+                .size(48.dp)
                 .padding(end = 8.dp),
                 painter = painterResource(id =R.drawable.nigeria_1), contentDescription = "nigerian flag")
             Text(text = stringResource(id = R.string.app_name),
-            style = MaterialTheme.typography.displaySmall)
+            style = MaterialTheme.typography.headlineSmall,
+
+            )
         }
     }, modifier = modifier)
         
