@@ -8,14 +8,18 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -47,13 +51,34 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun NigerianStatesAppBar(modifier: Modifier = Modifier){
+    CenterAlignedTopAppBar(title = {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Image(modifier = Modifier
+                .size(56.dp)
+                .padding(end = 8.dp),
+                painter = painterResource(id =R.drawable.nigeria_1), contentDescription = "nigerian flag")
+            Text(text = stringResource(id = R.string.app_name),
+            style = MaterialTheme.typography.displaySmall)
+        }
+    }, modifier = modifier)
+        
+
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NigerianStatesApp(modifier: Modifier = Modifier){
-    LazyColumn(modifier = modifier.padding(4.dp)){
-        items(states){
-            StateInformation(state = it, modifier = Modifier.padding(16.dp))
+    Scaffold(topBar = { NigerianStatesAppBar()}) {it ->
+        LazyColumn(contentPadding = it ,modifier = modifier.padding(4.dp)){
+            items(states){
+                StateInformation(state = it, modifier = Modifier.padding(16.dp))
+            }
         }
     }
+
 }
 
 @Composable
@@ -67,38 +92,52 @@ fun StateInformation(state: State, modifier: Modifier = Modifier) {
            modifier = Modifier.padding(8.dp),
            verticalArrangement = Arrangement.Center,
            horizontalAlignment = Alignment.Start ) {
-//           Text(text = stringResource(id = state.day))
+//           Text(text = stringResource(id = state.number))
            Row {
-               Text(text = stringResource(id = R.string.number))
+               Text(text = stringResource(id = state.number),
+                   style = MaterialTheme.typography.headlineSmall)
 
            }
            Row() {
                Text(text = stringResource(id = R.string.state),
-                   style = MaterialTheme.typography.displayLarge,
+                   style = MaterialTheme.typography.titleMedium,
                    modifier = Modifier.padding(end = 8.dp))
                Text(text = stringResource(id = state.stateRes),
-                   style = MaterialTheme.typography.displayLarge,)
+                   style = MaterialTheme.typography.titleMedium,)
            }
            Row() {
-               Text(text = stringResource(id = R.string.capital), modifier = Modifier.padding(end = 8.dp))
-               Text(text = stringResource(id = state.capitalRes))
+               Text(text = stringResource(id = R.string.capital),
+                   style = MaterialTheme.typography.titleMedium,
+                   modifier = Modifier.padding(end = 8.dp))
+               Text(text = stringResource(id = state.capitalRes),
+                   style = MaterialTheme.typography.titleMedium)
            }
 
            Row() {
-               Text(text = stringResource(id = R.string.slogan), modifier = Modifier.padding(end = 8.dp))
-               Text(text = stringResource(id = state.slogan))
+               Text(text = stringResource(id = R.string.slogan),
+                   style = MaterialTheme.typography.bodyMedium,
+                   modifier = Modifier.padding(end = 8.dp))
+               Text(text = stringResource(id = state.slogan),
+                   style = MaterialTheme.typography.bodyMedium)
            }
 
 
-           
-           Image(painter = painterResource(id = state.imageRes), contentDescription = stringResource(
-               id = R.string.state
-           ),
-           modifier = Modifier
-               .fillMaxSize()
-               .padding(8.dp),
-           contentScale = ContentScale.Crop,
-           )
+//        LazyRow() {
+//            items(states) {state ->
+//                state.imageRes
+                Image(painter = painterResource(id = state.imageRes), contentDescription = stringResource(
+                    id = R.string.state
+                ),
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(8.dp),
+                    contentScale = ContentScale.Crop,
+                )
+
+//            }
+
+//        }
+
        }
 
    }

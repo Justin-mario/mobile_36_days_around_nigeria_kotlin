@@ -5,7 +5,7 @@ import androidx.annotation.StringRes
 
 
 data class State(
-    val day: Int,
+    @StringRes val number: Int,
     @StringRes val stateRes: Int,
     @StringRes val capitalRes: Int,
     @StringRes val slogan: Int,
